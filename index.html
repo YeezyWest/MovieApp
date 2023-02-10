@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>MOVIES</title>
+</head>
+
+<body class="bg-[#272727]">
+
+    <!--Navbar-->
+    <nav class="fixed top-0 z-50 w-full bg-[#272727]">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center justify-start">
+                    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
+                        aria-controls="logo-sidebar" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                        <span class="sr-only">Open sidebar</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" fill-rule="evenodd"
+                                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                            </path>
+                        </svg>
+                    </button>
+                    <a href="#" class="hidden md:flex ml-2 md:mr-24">
+                        <img src="/img/DXX.MOVIES.png" alt="">
+                    </a>
+                </div>
+
+                <!--Search Movies-->
+                <div class="flex items-center">
+                    <form>
+                        <label for="default-search" class="mb-2 text-sm font-medium sr-only">Search</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-[#707070]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </div>
+                            <input type="search" id="default-search"
+                                class="block w-full px-12 py-2 pl- text-sm text-white border-[#272727] rounded-xl shadow-2xl shadow-black bg-[#272727] focus:ring-blue-500 placeholder-[#707070]"
+                                placeholder="search any movies....." required>
+                        </div>
+                    </form>
+                </div>
+                <!--Search movies ends-->
+                <!--Chat section-->
+                <div class="flex">
+                    <div class="hidden md:flex cursor-pointer">
+                        <img src="/img/Chat_Circle_Dots.png" alt="">
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="flex items-center ml-3">
+                            <div>
+                                <button type="button"
+                                    class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-900"
+                                    aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="w-8 h-8 rounded-full" src="img/Ellipse 2.png" alt="user photo">
+                                </button>
+                            </div>
+
+
+                            <div class="z-50 hidden my-4 text-base list-none  divide-y rounded shadow bg-gray-700 divide-gray-600"
+                                id="dropdown-user">
+                                <div class="px-4 py-3" role="none">
+                                    <p class="text-sm text-gray-900 dark:text-white" role="none">
+                                        Yeezy West
+                                    </p>
+                                    <p class="text-sm font-medium text-gray-300" role="none">
+                                        yadeshina57@gmail.com
+                                    </p>
+                                </div>
+                                <ul class="py-1 bg-[#151515]" role="none">
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
+                                            role="menuitem">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
+                                            role="menuitem">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm  text-gray-300 hover:bg-gray-600 hover:text-white"
+                                            role="menuitem">Earnings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
+                                            role="menuitem">Sign out</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--Chat section ends-->
+
+            </div>
+        </div>
+    </nav>
+    <!--Side bar-->
+    <aside id="logo-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-[#151515] border-r border-gray-200 sm:translate-x-0  dark:border-gray-700"
+        aria-label="Sidebar">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-[#151515]">
+            <ul class="space-y-2">
+                <li class="block md:hidden">
+                    <a href="#" class="flex items-center p-2 text-base font-normal">
+                        <img src="/img/DXX.MOVIES.png" alt="">
+                    </a>
+                </li>
+
+                <li class="flex items-center p-2">
+                    <p class="text-base text-[#707070] font-light">New feed</p>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <img class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900"
+                            src="img/Compass.png" alt="">
+                        <span class="ml-3">Browse</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <img class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900"
+                            src="img/Heart_01.png" alt="">
+                        <span class="ml-3">Wishlist</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <img class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900"
+                            src="img/Bell.png" alt="">
+                        <span class="ml-3">Remind</span>
+                    </a>
+                </li>
+                <li class="flex items-center p-2">
+                    <p class="text-base text-[#707070] font-light">Categories</p>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>Action</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>Horror</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>Adventure</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>animation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>adventure/action</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>SF,Adventure</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>Crime</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>Catoon</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>War</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+                        <span>Sport</span>
+                    </a>
+                </li>
+                <div class="flex">
+                    <a href="#"
+                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <svg aria-hidden="true"
+                            class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="flex items-center p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700">
+                            <svg aria-hidden="true"
+                                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="flex-1 ml-3 whitespace-nowrap">Log Out</span>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="p-4 sm:ml-64">
+        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+                <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+                <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+                <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+                <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <script src="script/app.js"></script>
+    <script src="script/movie.js"></script>
+</body>
+
+</html>
