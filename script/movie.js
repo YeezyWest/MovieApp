@@ -18,6 +18,7 @@ let slider1 = document.querySelector('.slider1')
 let slider2 = document.querySelector('.slider2')
 let slider3 = document.querySelector('.slider3')
 const moviesContainer = document.querySelector(".movies");
+const seriesContainer = document.querySelector(".series");
 let baseImgUrl = 'https://image.tmdb.org/t/p/original'
 
 const movies = () => {
@@ -26,9 +27,8 @@ const movies = () => {
 		.then(res => res.json())
 		.then(data => {
 			const movies = data.results
-			console.log(movies)
+			// console.log(movies)
 
-			// document.querySelector('#overview').innerHTML = data.results[0].overview
 			slider1.style.background = `linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)), url('${baseImgUrl + data.results[0].backdrop_path}')`
 			slider1.style.backgroundRepeat = "no-repeat";
 			slider1.style.backgroundPosition = "center center";
@@ -67,3 +67,39 @@ const movies = () => {
 
 movies()
 
+
+const series = () => {
+	fetch('https://api.themoviedb.org/3/tv/popular?api_key=3353494538b7b20f0794eeed963d293f&language=en-US&page=1')
+		.then(res => res.json())
+		.then(data => {
+			const series = data.results
+			console.log(series);
+			seriesContainer.innerHTML = series.map(series => `
+		<div class="swiper-slide">
+		  <img src='${baseImgUrl + series.backdrop_path}' class='w-20 rounded-md'/>
+		  <p>${series.name}</p>
+		</div>
+	  `).join("");
+		});
+
+}
+series()
+
+
+const openMovies = document.querySelector("#openmovies")
+const openseries = document.querySelector("#openseries")
+
+function myMovies() {
+	openseries.classList.add('hidden')
+	openMovies.classList.remove('hidden')
+	document.querySelector(".secondbutton").classList.remove('underline');
+	document.querySelector(".firstbutton").classList.add('underline');
+}
+
+function mySeries() {
+	openMovies.classList.add('hidden')
+	openseries.classList.remove('hidden')
+	document.querySelector(".secondbutton").classList.add('underline');
+	document.querySelector(".firstbutton").classList.remove('underline');
+
+}

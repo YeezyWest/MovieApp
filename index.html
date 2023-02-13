@@ -13,7 +13,7 @@
 	<title>MOVIES</title>
 </head>
 
-<body class="bg-[#272727]">
+<body class="bg-[#272727] font-Poppins">
 
 	<!--Navbar-->
 	<nav class="fixed top-0 z-50 w-full bg-[#272727]">
@@ -238,7 +238,7 @@
 					<div class="swiper-slide h-96 slider1 flex items-center justify-start text-white rounded-lg shadow-md">
 						<div class="content pl-5 md:mr-96 space-y-5">
 							<h3 class="title1 text-white text-5xl font-bold">Loading ....</h3>
-							<p class="overview1 leading-snug">Loading ....</p>
+							<p class="overview1 hidden md:block leading-snug">Loading ....</p>
 							<div>
 								<p class="release_date1">Released Date: Loading ....</p>
 								<p class="average_vote1">Rating: Loading ....</p>
@@ -249,7 +249,7 @@
 					<div class="swiper-slide h-96 slider2 flex items-center justify-start text-white rounded-lg shadow-md">
 						<div class="content pl-5 md:mr-96 space-y-5">
 							<h3 class="title2 text-white text-5xl font-bold">Loading ....</h3>
-							<p class="overview2 leading-snug">Loading ....</p>
+							<p class="overview2 hidden md:block leading-snug">Loading ....</p>
 							<div>
 								<p class="release_date2">Released Date: Loading ....</p>
 								<p class="average_vote2">Rating: Loading ....</p>
@@ -260,7 +260,7 @@
 					<div class="swiper-slide h-96 slider3 flex items-center justify-start text-white rounded-lg shadow-md">
 						<div class="content pl-5 md:mr-96 space-y-5">
 							<h3 class="title3 text-white text-5xl font-bold">Loading ....</h3>
-							<p class="overview3 leading-snug">Loading ....</p>
+							<p class="overview3 hidden md:block leading-snug">Loading ....</p>
 							<div>
 								<p class="release_date3">Released Date: Loading ....</p>
 								<p class="average_vote3">Rating: Loading ....</p>
@@ -270,19 +270,33 @@
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
-
+			<!--movies/Tv shows-->
 			<div class="text-white my-10">
-				<h3 class="font-bold text-3xl py-2">Movies</h3>
-				<div class="swiper myMovies">
-					<div class="swiper-wrapper movies">
-					</div>
-
+				<div class="flex items-center space-x-10 text-white font-bold">
+					<button class="font-bold text-3xl py-2 underline underline-offset-4 hover:underline firstbutton"
+						onclick="myMovies()">Movies</button>
+					<button class="font-bold text-3xl py-2 hover:underline secondbutton" onclick="mySeries()">TV Shows</button>
 				</div>
-
-
+				<div id="openmovies" class="">
+					<!-- <h3 class=" cursor-pointer">Movies</h3> -->
+					<div class="swiper myMovies">
+						<div class="swiper-wrapper movies">
+						</div>
+					</div>
+				</div>
+				<div id="openseries" class="hidden">
+					<!-- <h3 class="font-bold text-3xl text-[#343434] py-2 cursor-pointer">Tv show</h3> -->
+					<div class="swiper myTvSeries">
+						<div class="swiper-wrapper series">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+
+
+
 
 
 
@@ -302,7 +316,12 @@
 		});
 
 		var swiper = new Swiper(".myMovies", {
-			slidesPerView: 4,
+			slidesPerView: 2,
+			spaceBetween: 30,
+		});
+
+		var swiper = new Swiper(".myTvSeries", {
+			slidesPerView: 2,
 			spaceBetween: 30,
 		});
 	</script>
