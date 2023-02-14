@@ -18,5 +18,7 @@
 }
 
 .swiper-pagination-bullet {
-   
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
 }

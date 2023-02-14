@@ -19,6 +19,7 @@ let slider2 = document.querySelector('.slider2')
 let slider3 = document.querySelector('.slider3')
 const moviesContainer = document.querySelector(".movies");
 const seriesContainer = document.querySelector(".series");
+const watchingContainer = document.querySelector(".continueWatching");
 let baseImgUrl = 'https://image.tmdb.org/t/p/original'
 
 
@@ -57,7 +58,9 @@ const movies = () => {
 			overview2.textContent = data.results[2].overview
 			release_date2.textContent = `Release Date: ${data.results[2].release_date}`
 			rating2.textContent = `Rating: ${data.results[2].vote_average}/10`
+            
 
+			//movies list
 			moviesContainer.innerHTML = movies.map(movie => `
 			<div class="swiper-slide">
 			  <img src='${baseImgUrl + movie.backdrop_path}' class='w-20 rounded-md'/>
@@ -69,13 +72,13 @@ const movies = () => {
 
 movies()
 
-//tvSeries
+//tvSeries list
 const series = () => {
 	fetch('https://api.themoviedb.org/3/tv/popular?api_key=3353494538b7b20f0794eeed963d293f&language=en-US&page=1')
 		.then(res => res.json())
 		.then(data => {
 			const series = data.results
-			console.log(series);
+			//console.log(series);
 			seriesContainer.innerHTML = series.map(series => `
 		<div class="swiper-slide">
 		  <img src='${baseImgUrl + series.backdrop_path}' class='w-20 rounded-md'/>
@@ -106,7 +109,7 @@ function mySeries() {
 
 }
 
-
+//SearchMovies
 const searchInput = document.querySelector(".find");
 const searchResults = document.querySelector("#searchResults");
 
@@ -132,5 +135,23 @@ searchInput.addEventListener('keyup', (e) => {
     })
     .catch(error => console.error(error));
 });
+
+//continue watching
+const continueWatch = () => {
+	fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=3353494538b7b20f0794eeed963d293f&language=en-US&page=1')
+		.then(res => res.json())
+		.then(data => {
+			const continueWatching = data.results
+			console.log(continueWatching);
+			watchingContainer.innerHTML = continueWatching.map(continueWatching => `
+		<div class="swiper-slide">
+		  <img src='${baseImgUrl + continueWatching.backdrop_path}' class='w-20 rounded-md'/>
+		  <p>${continueWatching.original_title}</p>
+		</div>
+	  `).join("");
+		});
+
+}
+continueWatch()
 
 

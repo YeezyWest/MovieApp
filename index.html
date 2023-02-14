@@ -324,13 +324,22 @@
 	</div>
 
 
+	<!--continue watching-->
+	<div>
+		<div class="p-4 sm:ml-64">
+			<!--continue watching-->
+			<div class="swiper myContinue text-white">
+				<h1 class="text-white text-3xl font-bold">continue Watching</h1>
+				<div class="swiper-wrapper continueWatching">
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 
 
-
-
-
-
+	<!--script links-->
 	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
@@ -339,23 +348,31 @@
 		var swiper = new Swiper(".mySwiper", {
 			slidesPerView: "auto",
 			centeredSlides: true,
+			effect: "cards",
+			grabCursor: true,
 			spaceBetween: 30,
 			pagination: {
 				el: ".swiper-pagination",
 				clickable: true,
 			},
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+
 		});
 
 		var swiper = new Swiper(".myMovies", {
 			slidesPerView: 2,
 			spaceBetween: 30,
-			pagination: {
-				el: ".swiper-pagination1",
-				clickable: true,
-			},
 		});
 
 		var swiper = new Swiper(".myTvSeries", {
+			slidesPerView: 2,
+			spaceBetween: 30,
+		});
+
+		var swiper = new Swiper(".myContinue", {
 			slidesPerView: 2,
 			spaceBetween: 30,
 		});
