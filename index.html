@@ -20,8 +20,8 @@
 		<div class="px-3 py-3 lg:px-5 lg:pl-3">
 			<div class="flex items-center justify-between">
 				<div class="flex items-center justify-start">
-					<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
-						type="button"
+					<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
+						aria-controls="logo-sidebar" type="button"
 						class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
 						<span class="sr-only">Open sidebar</span>
 						<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -38,7 +38,7 @@
 
 				<!--Search Movies-->
 				<div class="flex items-center">
-					<form>
+					<form class="find">
 						<label for="default-search" class="mb-2 text-sm font-medium sr-only">Search</label>
 						<div class="relative">
 							<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -48,12 +48,14 @@
 										d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
 								</svg>
 							</div>
-							<input type="search" id="default-search"
+							<input type="search" name="search"
 								class="block w-full px-12 py-2 pl- text-sm text-white border-[#272727] rounded-xl shadow-2xl shadow-black bg-[#272727] focus:ring-blue-500 placeholder-[#707070]"
 								placeholder="search any movies....." required>
 						</div>
 					</form>
 				</div>
+
+
 				<!--Search movies ends-->
 				<!--Chat section-->
 				<div class="flex">
@@ -64,7 +66,8 @@
 					<div class="flex items-center">
 						<div class="flex items-center ml-3">
 							<div>
-								<button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-900"
+								<button type="button"
+									class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-900"
 									aria-expanded="false" data-dropdown-toggle="dropdown-user">
 									<span class="sr-only">Open user menu</span>
 									<img class="w-8 h-8 rounded-full" src="img/Ellipse 2.png" alt="user photo">
@@ -84,19 +87,23 @@
 								</div>
 								<ul class="py-1 bg-[#151515]" role="none">
 									<li>
-										<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
+										<a href="#"
+											class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
 											role="menuitem">Dashboard</a>
 									</li>
 									<li>
-										<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
+										<a href="#"
+											class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
 											role="menuitem">Settings</a>
 									</li>
 									<li>
-										<a href="#" class="block px-4 py-2 text-sm  text-gray-300 hover:bg-gray-600 hover:text-white"
+										<a href="#"
+											class="block px-4 py-2 text-sm  text-gray-300 hover:bg-gray-600 hover:text-white"
 											role="menuitem">Earnings</a>
 									</li>
 									<li>
-										<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
+										<a href="#"
+											class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
 											role="menuitem">Sign out</a>
 									</li>
 								</ul>
@@ -127,21 +134,24 @@
 					<p class="text-base text-[#707070] font-light">New feed</p>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<img class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900"
 							src="img/Compass.png" alt="">
 						<span class="ml-3">Browse</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<img class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900"
 							src="img/Heart_01.png" alt="">
 						<span class="ml-3">Wishlist</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<img class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900"
 							src="img/Bell.png" alt="">
 						<span class="ml-3">Remind</span>
@@ -151,52 +161,62 @@
 					<p class="text-base text-[#707070] font-light">Categories</p>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>Action</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>Horror</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>Adventure</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>animation</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>adventure/action</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>SF,Adventure</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>Crime</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>Catoon</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>War</span>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
+					<a href="#"
+						class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
 						<span>Sport</span>
 					</a>
 				</li>
@@ -214,7 +234,8 @@
 					</a>
 					</li>
 					<li>
-						<a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700">
+						<a href="#"
+							class="flex items-center p-2 text-base font-normal rounded-lg text-white  hover:bg-gray-700">
 							<svg aria-hidden="true"
 								class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
 								fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -231,11 +252,15 @@
 	</aside>
 	<div class="pt-20">
 		<div class="p-4 sm:ml-64">
+			<div class="text-white font-bold space-y-14" id="searchResults">
+
+			</div>
 			<!-- Swiper -->
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
 					<!--slider1-->
-					<div class="swiper-slide h-96 slider1 flex items-center justify-start text-white rounded-lg shadow-md">
+					<div
+						class="swiper-slide h-96 slider1 flex items-center justify-start text-white rounded-lg shadow-md">
 						<div class="content pl-5 md:mr-96 space-y-5">
 							<h3 class="title1 text-white text-5xl font-bold">Loading ....</h3>
 							<p class="overview1 hidden md:block leading-snug">Loading ....</p>
@@ -246,7 +271,8 @@
 						</div>
 					</div>
 					<!--slider2-->
-					<div class="swiper-slide h-96 slider2 flex items-center justify-start text-white rounded-lg shadow-md">
+					<div
+						class="swiper-slide h-96 slider2 flex items-center justify-start text-white rounded-lg shadow-md">
 						<div class="content pl-5 md:mr-96 space-y-5">
 							<h3 class="title2 text-white text-5xl font-bold">Loading ....</h3>
 							<p class="overview2 hidden md:block leading-snug">Loading ....</p>
@@ -257,7 +283,8 @@
 						</div>
 					</div>
 					<!--slider3-->
-					<div class="swiper-slide h-96 slider3 flex items-center justify-start text-white rounded-lg shadow-md">
+					<div
+						class="swiper-slide h-96 slider3 flex items-center justify-start text-white rounded-lg shadow-md">
 						<div class="content pl-5 md:mr-96 space-y-5">
 							<h3 class="title3 text-white text-5xl font-bold">Loading ....</h3>
 							<p class="overview3 hidden md:block leading-snug">Loading ....</p>
@@ -275,7 +302,8 @@
 				<div class="flex items-center space-x-10 text-white font-bold">
 					<button class="font-bold text-3xl py-2 underline underline-offset-4 hover:underline firstbutton"
 						onclick="myMovies()">Movies</button>
-					<button class="font-bold text-3xl py-2 hover:underline secondbutton" onclick="mySeries()">TV Shows</button>
+					<button class="font-bold text-3xl py-2 hover:underline secondbutton" onclick="mySeries()">TV
+						Shows</button>
 				</div>
 				<div id="openmovies" class="">
 					<!-- <h3 class=" cursor-pointer">Movies</h3> -->
@@ -300,6 +328,9 @@
 
 
 
+
+
+
 	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
@@ -318,6 +349,10 @@
 		var swiper = new Swiper(".myMovies", {
 			slidesPerView: 2,
 			spaceBetween: 30,
+			pagination: {
+				el: ".swiper-pagination1",
+				clickable: true,
+			},
 		});
 
 		var swiper = new Swiper(".myTvSeries", {

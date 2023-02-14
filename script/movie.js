@@ -21,6 +21,8 @@ const moviesContainer = document.querySelector(".movies");
 const seriesContainer = document.querySelector(".series");
 let baseImgUrl = 'https://image.tmdb.org/t/p/original'
 
+
+//movies
 const movies = () => {
 	fetch("https://api.themoviedb.org/3/movie/popular?api_key=3353494538b7b20f0794eeed963d293f&language=en-US&page=1")
 
@@ -67,7 +69,7 @@ const movies = () => {
 
 movies()
 
-
+//tvSeries
 const series = () => {
 	fetch('https://api.themoviedb.org/3/tv/popular?api_key=3353494538b7b20f0794eeed963d293f&language=en-US&page=1')
 		.then(res => res.json())
@@ -103,3 +105,32 @@ function mySeries() {
 	document.querySelector(".firstbutton").classList.remove('underline');
 
 }
+
+
+const searchInput = document.querySelector(".find");
+const searchResults = document.querySelector("#searchResults");
+
+searchInput.addEventListener('keyup', (e) => {
+  e.preventDefault();
+  const searchValue = searchInput.search.value;
+  const apiKey = "3353494538b7b20f0794eeed963d293f";
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchValue}`;
+  
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const results = data.results;
+      searchResults.innerHTML = ""; // clear previous results
+      results.forEach(movie => {
+        const movieElement = document.createElement("div");
+        movieElement.innerHTML = `
+          <img src='${baseImgUrl + movie.backdrop_path}' class='rounded-xl shadow-2xl shadow-black'/>
+		  <h2>${movie.title}</h2>
+        `;
+        searchResults.appendChild(movieElement);
+      });
+    })
+    .catch(error => console.error(error));
+});
+
+
