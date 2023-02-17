@@ -69,7 +69,6 @@ const movies = () => {
 		  `).join("");
 		});
 }
-
 movies()
 
 //tvSeries list
